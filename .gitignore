@@ -1,0 +1,12 @@
+#Ignora las capas raster de CLM
+data/raster_shapes_clm
+
+#Ignoras las capas raster que haya en pred_clm
+pred_clm/*.tif
+
+#Ignora los archivos .tif.aux.xml
+*.tif.aux.xml
+
+#Ignora archivos demasiado grandes
+models/experiment_1/model_reg.joblib
+models/experiment_1/model_class.joblib
