@@ -13,7 +13,7 @@ Autor: __Alejandro Martínez García__
 ### Archivos grandes
 Los archivos que pesan más de 100 MB están en otro repositorio en OneDrive en este [enlace](https://pruebasaluuclm-my.sharepoint.com/:f:/g/personal/alejandro_martinez39_alu_uclm_es/EuTE_auwQ8RDrZEGrQTNLW8B7IDmwRbfsfO4IYwqfv0knw). Estos archivos son:
 
-- La carpeta `raster_shapes_clm` que contiene las capas ráster con los datos de Castilla-La Mancha. Esta carpeta debe incluirse en la ruta del proyecto `data/`. __NOTA__: _Si no de puede descomprimir el .zip, descargar los archivos de forma individual._
+- La carpeta `raster_shapes_clm` que contiene las capas ráster con los datos de Castilla-La Mancha. Esta carpeta debe incluirse en la ruta del proyecto `data/`. __NOTA__: _Si no se puede descomprimir el .zip, descargar los archivos de forma individual._
 - La carpeta `experiment_1` que contiene los dos modelos entrenados en el primer experimento. Esta carpeta debe reemplazar a la ya existente en la ruta del proyecto `models/`.
 - El archivo `pred_clm/pred_clm_15-07-2023.tif`es el ráster con la predicción de Castilla-La Mancha generada en la sección. Este archivo debe incluirse en la ruta del proyecto `pred_clm/`.
 
