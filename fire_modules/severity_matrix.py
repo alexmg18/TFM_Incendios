@@ -82,15 +82,3 @@ def show_original_prediction_evaluation_severity_matrices(original_matrix:np.arr
     fig.subplots_adjust(wspace=0.2, hspace=0.1)  
 
     fig.suptitle(fig_title)
-
-    # evaluation_text = f'Evaluación\n\n'
-    # unique_values, frequencies = np.unique(evaluation_matrix[~np.isnan(evaluation_matrix)], return_counts=True)
-    # total = frequencies.sum()
-    # for value, frequency in zip(unique_values, frequencies):
-    #     evaluation_text += f'{int(value):>2}: {round((frequency/total)*100, 1)}% - ({frequency:,} / {total:,})\n'
-
-    # x_pos = 1.25
-    # y_pos = 1
-    # axes_grid[2].text(x_pos, y_pos, evaluation_text, fontsize=12, ha='left', va='top', transform=axes_grid[2].transAxes)
-
-

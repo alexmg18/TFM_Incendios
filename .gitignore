@@ -10,3 +10,10 @@ pred_clm/*.tif
 #Ignora archivos demasiado grandes
 models/experiment_1/model_reg.joblib
 models/experiment_1/model_class.joblib
+
+#Ignora los archivos compilados para interpolar con OpenMP
+docker_mpi_openmp/openmp/interpolate_omp
+docker_mpi_openmp/openmp/interpolate_omp.o
+
+#Ignora los datos binarios creados para interpolar
+docker_mpi_openmp/openmp/data/*.dat

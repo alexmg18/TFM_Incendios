@@ -6,7 +6,7 @@ sys.path.append(PROJECT_PATH)
 
 import numpy as np
 import pandas as pd
-import docker
+import subprocess
 
 from fire_modules.utils import load_matrix_bin, save_matrix_bin, convert_coordinates
 
@@ -29,13 +29,10 @@ def interpolate_openmp(matrix:np.array, known_rows:np.array, known_cols:np.array
     save_matrix_bin(input_matrix_path, matrix)
 
     print('**********************************************************************')
-    client = docker.from_env()
-    container_name = 'mpi_openmp'
-    container = client.containers.get(container_name)
-    command = f'/bin/bash -c ". /home/openmp/run_exe.sh {n_processes}"'
-    command_output = container.exec_run(command, tty=True)
-    command_output = command_output.output.decode('utf-8').strip()
-    print(command_output)
+    command = ['docker', 'exec', 'mpi_openmp', '/bin/bash', '-c', 'OMP_NUM_THREADS=8 /home/openmp/interpolate_omp']
+    result = subprocess.run(command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
+    if result.stdout: print(result.stdout)
+    if result.stderr: print('Error:\n', result.stderr)
     print('**********************************************************************')
 
     matrix_interpolated = load_matrix_bin(output_matrix_path)
